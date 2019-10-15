@@ -86,7 +86,7 @@ def setup_crontab():
 		job  = system_crontab.new(command=job_command, comment="Renew lets-encrypt every month")
 		job.every().month()
 		job.enable()
-		system_crontab.write()
+		system_crontab.write_to_user()
 
 
 def create_dir_if_missing(path):
